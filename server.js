@@ -12,7 +12,11 @@ app.use(bodyParser.json());
 var db;
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect(process.env.MONGODB_URI || 'mongodb://rohanlim:123456@ds059496.mlab.com:59496/mean-contact-list', function (err, database) {
+
+
+
+mongodb.MongoClient.connect('mongodb://rohanlim:123456@ds137464.mlab.com:37464/mean_contactlist', function (err, database) {
+//mongodb.MongoClient.connect('mongodb://rohanlim:123456@ds159348.mlab.com:59348/local_library', function (err, database) {
   if (err) {
     console.log(err);
     process.exit(1);
